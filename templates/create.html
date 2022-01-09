@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+    margin:50px 0px; padding:0px;
+    text-align:center;
+    align:center;
+}
+
+
+    </style>
+</head>
+    <body>
+        <div class="container">
+<h1>{% block title %} Add a New Song {% endblock %}</h1>
+    <form method="post">
+        <label for="id">Id</label>
+        <br>
+        <input type="text" name="id"
+               placeholder="Song id"
+               value="{{ request.form['id'] }}"></input>
+        <br>
+        <label for="name">Name</label>
+        <br>
+        <input type="text" name="name"
+               placeholder="Song name"
+               value="{{ request.form['name'] }}"></input>
+        <br>
+        <br>
+        <label for="artist">Artist</label>
+        <br>
+        <input type="text" name="artist"
+               placeholder="Artist"
+               value="{{ request.form['artist'] }}"></input>
+        <br>
+        <br>
+        <label for="artist">Type</label>
+        <br>
+        <input type="text" name="type"
+               placeholder="Type"
+               value="{{ request.form['type'] }}"></input>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+    </html>
