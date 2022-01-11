@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from flask import Flask, redirect
+from flask import Flask, redirect,url_for
 from flask import request
 from flask import render_template
 import html
@@ -47,7 +47,7 @@ def create():
         try:
             db = get_db()
             songs = db.song_tb.insert_one(data)
-            return redirect("http://localhost:5000/songs")
+            return redirect("/songs")
         except:
             pass
 
@@ -63,8 +63,7 @@ def add_songs():
     try:
         db = get_db()
         songs = db.song_tb.insert_one({"id":"4", "name":"never","artist": "BTS", "type": "rock"})
-        return redirect("http://localhost:5000/songs")
-
+        return redirect("/songs")
     except:
         pass
     finally:

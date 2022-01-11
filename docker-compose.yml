@@ -2,7 +2,7 @@ version: '2.2.2'
 
 services:
   app:
-    image: elefkour/pythonmongoelef
+    image: elefkour/mongopythonelef
     environment:
       - FLASK_APP=app.py
       - FLASK_DEBUG=1
